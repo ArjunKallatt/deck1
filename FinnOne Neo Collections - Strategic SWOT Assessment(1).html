@@ -2534,15 +2534,6 @@ const visionItems = [{"h": "Smart Classification", "p": "Create dynamic risk buc
       if (Math.abs(dx) > 60) { dx < 0 ? goTo(current + 1) : goTo(current - 1); }
     }, { passive: true });
 
-    let wheelLock = false;
-    document.addEventListener('wheel', e => {
-      if (wheelLock) return;
-      if (Math.abs(e.deltaY) < 30) return;
-      wheelLock = true;
-      e.deltaY > 0 ? goTo(current + 1) : goTo(current - 1);
-      setTimeout(() => wheelLock = false, 700);
-    }, { passive: true });
-
     const coverDate = document.getElementById('coverDate');
     if (coverDate) {
       const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
