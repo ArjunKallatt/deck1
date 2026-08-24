@@ -230,14 +230,6 @@
       gap: 10px;
     }
 
-    .eyebrow::before {
-      content: "";
-      width: 22px;
-      height: 1px;
-      background: var(--gold-hi);
-      opacity: .6;
-    }
-
     h1, h2, h3, h4, h5, h6 {
       color: var(--gold-hi);
     }
@@ -2095,7 +2087,7 @@
               <p class="lede reveal r4">Assessing our readiness for the next era of intelligent, digital and autonomous collections.</p>
               <div class="footer-row reveal r6">
                 <div>Prepared for: Nucleus Software Board of Directors · Product Strategy Committee</div>
-                <div>Strategic Assessment · 11 slides · Evidence-based</div>
+                <div><span id="coverDate">July 2026</span> &middot; Strategic Assessment · 11 slides · Evidence-based</div>
               </div>
             </div>
             <div class="reveal r3">
@@ -2546,6 +2538,13 @@ const visionItems = [{"h": "Smart Classification", "p": "Create dynamic risk buc
       e.deltaY > 0 ? goTo(current + 1) : goTo(current - 1);
       setTimeout(() => wheelLock = false, 700);
     }, { passive: true });
+
+    const coverDate = document.getElementById('coverDate');
+    if (coverDate) {
+      const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+      const now = new Date();
+      coverDate.textContent = `${months[now.getMonth()]} ${now.getFullYear()}`;
+    }
 
     goTo(0);
     setTimeout(() => {
