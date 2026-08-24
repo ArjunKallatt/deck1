@@ -604,7 +604,7 @@
 
     #s1 .mark {
       font-family: var(--serif);
-      font-size: 181.5px;
+      font-size: 100px;
       line-height: 1;
       color: transparent;
       -webkit-text-stroke: 1.4px rgba(0, 0, 0, 0.15);
@@ -613,6 +613,7 @@
       right: 60px;
       opacity: .7;
       letter-spacing: -.02em;
+      white-space: nowrap;
     }
 
     #s1 .qcols {
@@ -2073,7 +2074,7 @@
       <!-- ================= SLIDE 1 : COVER ================= -->
       <section class="slide" id="s1" data-section="Cover">
         <div class="slide-inner">
-          <div class="mark">SWOT</div>
+          <div class="mark">COLLECTIONS</div>
           <div class="title-grid">
             <div>
               <div class="badge-row reveal r1">
@@ -2506,7 +2507,7 @@ const visionItems = [{"h": "Smart Classification", "p": "Create dynamic risk buc
     segs.forEach(s => s.addEventListener('click', () => goTo(+s.dataset.i)));
     document.getElementById('prevBtn').addEventListener('click', () => goTo(current - 1));
     document.getElementById('nextBtn').addEventListener('click', () => goTo(current + 1));
-    document.getElementById('fsBtn').addEventListener('click', () => {
+    function toggleFullscreen() {
       if (!document.fullscreenElement) {
         document.documentElement.requestFullscreen().catch(err => {
           console.error(`Error attempting to enable fullscreen: ${err.message}`);
@@ -2514,12 +2515,15 @@ const visionItems = [{"h": "Smart Classification", "p": "Create dynamic risk buc
       } else {
         document.exitFullscreen();
       }
-    });
+    }
+
+    document.getElementById('fsBtn').addEventListener('click', toggleFullscreen);
 
     document.addEventListener('keydown', (e) => {
       if (['ArrowRight', 'PageDown', ' '].includes(e.key)) { e.preventDefault(); goTo(current + 1); }
       if (['ArrowLeft', 'PageUp'].includes(e.key)) { e.preventDefault(); goTo(current - 1); }
       if (e.key === 'Home') { goTo(0); }
+      if (e.key === 'f' || e.key === 'F') { e.preventDefault(); toggleFullscreen(); }
       if (e.key === 'End') { goTo(total - 1); }
     });
 
