@@ -2222,7 +2222,7 @@
                 invisible, AI-assisted servicing over the next five to seven years.</p>
               <div class="footer-row reveal r6">
                 <div>Prepared for: Nucleus Software Board of Directors</div>
-                <div>July 2026 &middot; 19 slides &middot; Evidence-based &middot; Independent</div>
+                <div><span id="coverDate">July 2026</span> &middot; 19 slides &middot; Evidence-based &middot; Independent</div>
               </div>
             </div>
             <div class="reveal r3">
@@ -3830,6 +3830,13 @@ const marketValues = [
       const dx = e.changedTouches[0].clientX - touchStartX;
       if (Math.abs(dx) > 60) { dx < 0 ? goTo(current + 1) : goTo(current - 1); }
     }, { passive: true });
+
+    const coverDate = document.getElementById('coverDate');
+    if (coverDate) {
+      const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+      const now = new Date();
+      coverDate.textContent = `${months[now.getMonth()]} ${now.getFullYear()}`;
+    }
 
     goTo(0);
     setTimeout(() => {
