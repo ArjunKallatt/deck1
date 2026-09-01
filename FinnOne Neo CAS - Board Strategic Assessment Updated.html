@@ -2784,7 +2784,7 @@
       { id: "A8", label: "Cloud-native architecture", note: "No cloud-native", score: 0, cls: "rose" },
       { id: "A9", label: "AI Adoption", note: "AI chatbot, scoring; GenAI co-pilot absent", score: 2, cls: "rose" },
       { id: "A10", label: "Low-code / no-code", note: "Configuration yes; citizen-dev tooling no", score: 2, cls: "rose" },
-      { id: "A11", label: "Interface Ecosystem", note: "Bureau, KYC, scoring, payments connected", score: 8, cls: "green" },
+      { id: "A11", label: "Comprehensive Interface Ecosystem", note: "Bureau, KYC, scoring, payments connected", score: 8, cls: "green" },
       { id: "A12", label: "Embedded finance / Open Banking", note: "RBI AA partial", score: 2, cls: "rose" }
     ];
 
@@ -2799,16 +2799,16 @@
       { id: "08", d: "Cloud-native architecture", exp: "Must, transition", expp: 90, mat: "0/10", matp: 0, cls: "rose", flag: true },
       { id: "09", d: "AI Adoption", exp: "High, growing", expp: 80, mat: "2/10", matp: 20, cls: "rose", flag: true },
       { id: "10", d: "Low-code / no-code", exp: "Must, transition", expp: 90, mat: "2/10", matp: 20, cls: "rose", flag: true },
-      { id: "11", d: "Interface Ecosystem", exp: "High", expp: 80, mat: "8/10", matp: 80, cls: "green", flag: false },
+      { id: "11", d: "Comprehensive Interface Ecosystem", exp: "High", expp: 80, mat: "8/10", matp: 80, cls: "green", flag: false },
       { id: "12", d: "Embedded finance / Open Banking", exp: "Strategic", expp: 85, mat: "2/10", matp: 20, cls: "rose", flag: true }
     ];
 
     const swot = {
       S: [
         { id: "S1", t: "Lending domain depth" },
-        { id: "S3", t: "Configurable workflow depth" },
-        { id: "S4", t: "Interface Ecosystem" },
-        { id: "S5", t: "India leadership reference" }
+        { id: "S2", t: "Configurable workflow depth" },
+        { id: "S3", t: "Comprehensive Interface Ecosystem" },
+        { id: "S4", t: "India leadership reference" }
       ],
       W: [
         { id: "W1", t: "Cloud-native architecture gap" },
@@ -2843,21 +2843,21 @@
         implication: "Anchor: proof in RFP defence; protect against ‘LOS commoditisation’."
       },
       {
-        id: "S3", t: "Configurable workflow depth", sub: "SOA + configurable workflow for pricing / policy / fees across product lines.",
+        id: "S2", t: "Configurable workflow depth", sub: "SOA + configurable workflow for pricing / policy / fees across product lines.",
         evidence: "Documented configurable workflow depth (Nucleus 2023); IBS Intelligence 2024.",
         impact: "Lower TCO across multi-product portfolios; rapid launch of new product variants without vendor dependency.",
         relevance: "Universal - large banks with diverse portfolios; co-operative banks in India / Africa.",
         implication: "Extend as north-star differentiator; respect that cloud-native vendors now match UI."
       },
       {
-        id: "S4", t: "Interface Ecosystem - bureau, KYC, payment connectivity", sub: "Deep credit bureau + eKYC integration. Low-friction due-diligence at RFP stage.",
+        id: "S3", t: "Comprehensive Interface Ecosystem - bureau, KYC, payment connectivity", sub: "Deep credit bureau + eKYC integration. Low-friction due-diligence at RFP stage.",
         evidence: "“Seamlessly integrating with credit bureaus and external scoring engines” (Nucleus 2023).",
         impact: "Eliminates 8–16 weeks per-customer integration - drives sales-cycle reduction.",
         relevance: "Universal - every market operates bureau-mediated credit decisions.",
         implication: "Monetise - open a bureau-as-a-service SaaS add-on; lock customer switching."
       },
       {
-        id: "S5", t: "India leadership & IBS Intelligence #1 recognition", sub: "Nucleus ‘#1 Leader, Lending Solutions’ Indian Domestic Sales League Table 2019.",
+        id: "S4", t: "India leadership & IBS Intelligence #1 recognition", sub: "Nucleus ‘#1 Leader, Lending Solutions’ Indian Domestic Sales League Table 2019.",
         evidence: "IBS Intelligence 2019 ranking (PR Newswire 2020).",
         impact: "Brand-equity + RFP shortlisting leverage.",
         relevance: "India + surrounding borders.",
